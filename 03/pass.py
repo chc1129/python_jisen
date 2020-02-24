@@ -1,0 +1,2 @@
+class PracticeBookError(Exception):
+	pass
