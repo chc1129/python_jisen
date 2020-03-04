@@ -110,6 +110,3 @@ def increment(page_num, last):
 
 next_page = increment(3, 3) # return文が実行されない
 print(next_page) # 戻り値はNone
-
-
-
