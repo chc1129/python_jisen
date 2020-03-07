@@ -74,7 +74,7 @@ class MyClass(Evil):
 my = MyClass() # myの値は1になる
 
 # 追加したはずのメソッドが利用できない
-my.print_class()
+# my.print_class()
 #    my.print_class()
 #    AttributeError: 'int' object has no attribute 'print_class'
 
