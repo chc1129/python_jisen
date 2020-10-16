@@ -2,7 +2,7 @@ import os
 import time
 import sys
 from concurrent.futures import (
-    ProcessPoolExecutor,
+    ThreadPoolExecutor,
     as_completed
 )
 
@@ -27,8 +27,8 @@ def get_sequential(nums):
         print(fibonacci(num))
 
 @elapsed_time
-def get_multi_process(nums):
-    with ProcessPoolExecutor() as e:
+def get_multi_thread(nums):
+    with ThreadPoolExecutor() as e:
         futures = [e.submit(fibonacci, num)
                     for num in nums]
         for future in as_completed(futures):
@@ -38,7 +38,7 @@ def main():
     n = int(sys.argv[1])
     # 返される値は環境で異なる
     nums = [n] * os.cpu_count()
-    get_multi_process(nums)
+    get_multi_thread(nums)
 
 if __name__ == "__main__":
     main()
