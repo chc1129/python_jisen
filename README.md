@@ -19,7 +19,5 @@ ASIN: B0842JDVBZ
 第12章 ユニットテスト  
 第13章 実践的なPythonアプリケーションの開発  
 
-  
 ![python_jisen](https://github.com/chc1129/image/tree/master/python_jisen/python_jisen.png)
-  
 
